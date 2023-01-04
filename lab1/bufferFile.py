@@ -5,14 +5,14 @@ class BufferFile:
         self.father = father
         self.info = []
 
-    def delete(self):
+    def __delete__(self):
         return
 
-    def move(self, path):
+    def __move__(self, path):
         return
 
-    def push(self, elem):
+    def __push__(self, elem):
         return
 
-    def consume(self):
+    def __consume__(self):
         return
