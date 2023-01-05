@@ -5,9 +5,14 @@ class Directory:
         self.father = father
         self.elementsCount = 0
         self.fileList = []
+        self.deleted = False
 
     def __delete__(self):
-        return {'message': self.name + ' directory deleted'}
+        if self.deleted is False:
+            self.deleted = True
+            return {'message': self.name + ' directory deleted'}
+        else:
+            return {'error': 'Directory is already deleted'}
 
     def __listElements__(self):
         answ = ''
